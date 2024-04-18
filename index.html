@@ -1,0 +1,115 @@
+<html>
+    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+Mono+One&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body class="flex flex-column align-center gap">
+        <div class="flex flex-column justify-center gap text-center">
+            <h1 class="font-text text-center color-text">BASKETBALL SCOREBOARD</h1>
+            <div class="boards flex justify-center gap">
+                <!-- HOME FOULS -->
+                <div class="flex flex-column align-center gap padding-board bg-gradient color-border">
+                    <h2 id="title-fouls-home" class="font-text fz-sm text-center color-text" data-team ="home">HOME FOULS</h3>
+                    <div class="padding-display bg-display">
+                        <p id="fouls-home" class="font-display fz-lg color-highlight ">0</p>
+                    </div>
+                    <div class="flex gap">
+                        <button class="btn width-btn-sm manage-btn" data-diff="1" data-team="home" data-type="fouls" data-title="title">+1</button>
+                        <button class="btn width-btn-sm manage-btn" data-diff="-1" data-team="home" data-type="fouls" data-title="title">-1</button>
+                    </div>
+                    <button class="btn width-btn-lg manage-btn" data-team="home" data-type="fouls" data-reset="reset" data-title="title">RESET</button>
+                </div>
+                <!-- SCOREBOARD -->
+                <div class="scoreboard flex gap padding-board bg-gradient color-border">
+                    <!-- HOME SCORE -->
+                    <div class="flex flex-column align-center gap">
+                        <h2 id="title-points-home" class="font-text fz-sm text-center color-text" data-team="home">HOME</h3>
+                        <div class="padding-display bg-display">
+                            <p id="points-home" class="font-display fz-lg color-highlight">000</p>
+                        </div>
+                        <div class="flex justify-space-between gap">
+                            <button class="btn width-btn-sm manage-btn" data-diff="1" data-team="home" data-type="points" data-title="title">+1</button>
+                            <button class="btn width-btn-sm manage-btn" data-diff="2" data-team="home" data-type="points" data-title="title">+2</button>
+                            <button class="btn width-btn-sm manage-btn" data-diff="3" data-team="home" data-type="points" data-title="title">+3</button>
+                        </div>
+                        <div class="flex justify-space-between gap">
+                            <button class="btn width-btn-sm manage-btn" data-diff="-1" data-team="home" data-type="points" data-title="title">-1</button>
+                            <button class="btn width-btn-sm manage-btn" data-diff="-2" data-team="home" data-type="points" data-title="title">-2</button>
+                            <button class="btn width-btn-sm manage-btn" data-diff="-3" data-team="home" data-type="points" data-title="title">-3</button>
+                        </div>
+                        <div>
+                            <button class="btn width-btn-lg manage-btn" data-team="home" data-type="points" data-reset="reset" data-title="title">RESET</button>
+                        </div>
+                    </div>
+                    <!-- GUEST SCORE -->
+                    <div class="flex flex-column flex align-center gap">
+                        <h2 id="title-points-guest" class="font-text fz-sm text-center color-text" data-team="guest">GUEST</h3>
+                        <div class="padding-display bg-display">
+                            <p id="points-guest" class="font-display fz-lg color-highlight">000</p>
+                        </div>
+                        <div class="flex justify-space-between gap">
+                            <button class="btn width-btn-sm manage-btn" data-diff="1" data-team="guest" data-type="points" data-title="title">+1</button>
+                            <button class="btn width-btn-sm manage-btn" data-diff="2" data-team="guest" data-type="points" data-title="title">+2</button>
+                            <button class="btn width-btn-sm manage-btn" data-diff="3" data-team="guest" data-type="points" data-title="title">+3</button>
+                        </div>
+                        <div class="flex justify-space-between gap">
+                            <button class="btn width-btn-sm manage-btn" data-diff="-1" data-team="guest" data-type="points" data-title="title">-1</button>
+                            <button class="btn width-btn-sm manage-btn" data-diff="-2" data-team="guest" data-type="points" data-title="title">-2</button>
+                            <button class="btn width-btn-sm manage-btn" data-diff="-3" data-team="guest" data-type="points" data-title="title">-3</button>
+                        </div>
+                        <div>
+                            <button class="btn width-btn-lg manage-btn" data-team="guest" data-type="points" data-reset="reset" data-title="title">RESET</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- GUEST FOULS -->
+                <div class="flex flex-column align-center gap padding-board bg-gradient color-border">
+                    <h2 id="title-fouls-guest" class="font-text fz-sm text-center color-text" data-team = "guest">GUEST FOULS</h3>
+                    <div class="padding-display bg-display">
+                        <p id="fouls-guest" class="font-display fz-lg color-highlight">0</p>
+                    </div>
+                    <div class="flex gap">
+                        <button class="btn width-btn-sm manage-btn" data-diff="1" data-team="guest" data-type="fouls" data-title="title">+1</button>
+                        <button class="btn width-btn-sm manage-btn" data-diff="-1" data-team="guest" data-type="fouls" data-title="title">-1</button>
+                    </div>
+                    <button class="btn width-btn-lg manage-btn" data-team="guest" data-type="fouls" data-reset="reset" data-title="title">RESET</button>
+                </div>
+            </div>
+            <div class="boards flex justify-center gap">
+                <!-- TIME -->
+                <div class="flex flex-column align-center gap padding-board bg-gradient color-border">
+                    <h2 class="font-text fz-sm text-center color-text">TIME</h3>
+                    <div class="padding-display bg-display">
+                        <p id="time" class="font-display fz-lg color-highlight">00:00</p>
+                    </div>
+                    <div class="flex justify-center gap">
+                        <button id="btn-start" class="btn width-btn-lg time-btn" data-action="start">START</button>
+                        <button id="btn-pause" class="btn width-btn-lg time-btn" data-action="pause">PAUSE</button>
+                        <button id="btn-reset" class="btn width-btn-lg time-btn" data-action="reset">RESET</button>
+                    </div>
+                    <div class="flex justify-center gap">
+                        <form class="flex justify-center gap">
+                            <input id="minutes"  type="text" minlength="2" maxlength="2" placeholder="Min" class="font-display text-center color-highlight">
+                            <input id="seconds"  type="text" minlength="0" maxlength="2" placeholder="SEC" class="font-display text-center color-highlight">
+                        </form>
+                        <button id="btn-set" class="btn width-btn-lg time-btn" data-action="start">SET</button>
+                    </div>
+                </div>
+                <!-- QUARTER -->
+                <div class="flex flex-column align-center gap padding-board bg-gradient color-border">
+                    <h2 class="font-text fz-sm text-center color-text">QUARTER</h3>
+                    <div class="padding-display bg-display">
+                        <p id="quarter" class="font-display fz-lg color-highlight"></p>
+                    </div>
+                    <div>
+                        <button id="new-game" class="new-game btn" data-team="home" data-team="guest" data-type="fouls" data-type="points" data-title="title" data-action="reset">NEW GAME</button>
+                    </div>
+                </div>
+            </div>
+            <p id="error"></p>
+        </div>
+        <script src="index.js"></script>
+    </body>
+</html>

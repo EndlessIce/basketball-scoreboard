@@ -1,0 +1,181 @@
+@font-face {
+    font-family: "Cursed Timer";
+    src: url("CursedTimerUlil-Aznm.ttf");
+    ascent-override: 100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+    /* BACKGROUND IMAGE */
+    --bg-image: url("basketball.jpg");
+    /* BACKGROUND SHADOW */
+    --bg-shadow: rgba(0, 0, 0, 0.7);
+    /* COLORS */
+    --clr-bg-gradient: linear-gradient(#064E3B, #6EE7B7);
+    --clr-bg-solid-1: #047857;
+    --clr-bg-solid-2: #111827;
+    --clr-bg-solid-3: #080001;
+    --clr-border: #ECFDF5;
+    --clr-highlight: #FBBF24;
+    --clr-text: #ECFDF5;
+    --clr-error: red;
+    /* FONT SIZES */
+    --fz-2rem: 2rem;
+    --fz-4rem: 4rem;
+    --fz-6rem: 6rem;
+    --fz-9rem: 9rem;
+}
+
+body {
+    padding: 6em;
+    height: 100vh;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+    background: var(--clr-bg-solid-2);
+}
+
+h1 {
+    margin: 0 0 0.5em;
+    font-size: var(--fz-6rem);
+}
+
+input {
+    display: block;
+    width: 3em;
+    font-size: var(--fz-4rem);
+    font-weight: bold;
+    background: var(--clr-bg-solid-3);
+    border: none;   
+}
+
+::placeholder {
+    color: var(--clr-highlight);
+    text-shadow: 0 0 5px var(--clr-highlight);
+}
+
+/* IDS */
+#error {
+    margin: 0;
+    font-weight: bold;
+    font-size: var(--fz-4rem);
+    color: var(--clr-error);
+}
+
+/* GENERAL CLASSESS */
+.btn {
+    padding: 0.5em;
+    height: 2.5em;
+    font-family: "Roboto", sans-serif;
+    font-size: var(--fz-2rem);
+    color: var(--clr-text);
+    background: var(--clr-bg-solid-1);
+    border: 0.2rem solid var(--clr-border);
+    border-radius: 0.5rem;
+    transition: color .3s, text-shadow .3s, border .3s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    color: var(--clr-highlight);
+    text-shadow: 0 0 5px var(--clr-highlight);
+    box-shadow: 0 0 5px var(--clr-highlight);
+    border: 0.2rem solid var(--clr-highlight);   
+}
+
+.scoreboard {
+    justify-content: space-around;
+    width: 55em;
+}
+
+.new-game {
+    width: 7em;
+}
+
+/* UTILITY CLASSES */
+.flex {
+    display: flex; 
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.gap {
+    gap: 2em;
+}
+
+.padding-board {
+    padding: 4em;
+}
+
+.padding-display {
+    padding: 0 2em;
+}
+
+.width-btn-lg {
+    width: 6em;
+}
+
+.width-btn-sm {
+    width: 2.5em;
+}
+
+.font-display {
+    font-family: "Cursed Timer";
+}
+
+.font-text {
+     font-family: "Roboto", sans-serif;
+}
+
+.fz-sm {
+    font-size: var(--fz-4rem);
+}
+
+.fz-lg {
+    font-size: var(--fz-9rem);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bg-gradient {
+    background: var(--clr-bg-gradient);
+}
+
+.bg-display {
+    background: var(--clr-bg-solid-3)
+}
+
+.color-text {
+    color: var(--clr-text)
+}
+
+.color-border {
+    border: 0.2rem solid var(--clr-border);
+}
+
+/* CLASSES ADDED/REMOVED WITH JAVASCRIPT */
+.color-highlight {
+    color: var(--clr-highlight);
+    text-shadow: 0 0 5px var(--clr-highlight);
+}
