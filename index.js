@@ -154,7 +154,7 @@ function manageTimeAndQuarter(event) {
     } else if (event.currentTarget === btnStart && timeDisplay.textContent !== "00:00") {
         timeInterval = setInterval(countDown, 1000)
         btnStart.setAttribute("disabled", "true")      
-    } else if (event.currentTarget === btnSet && !inputMinutes.value.match(/\D/) && !inputMinutes.value.match(/\D/) && inputMinutes.value !== "" && !inputMinutes.value !== "" && inputMinutes.value <= maxValue && inputMinutes.value >= minValue && inputSeconds.value <= maxValue && inputSeconds.value >= minValue) {
+    } else if (event.currentTarget === btnSet && !inputMinutes.value.match(/\D/) && !inputMinutes.value.match(/\D/) && inputMinutes.value <= maxValue && inputMinutes.value >= minValue && inputSeconds.value <= maxValue && inputSeconds.value >= minValue) {
         
         if (inputMinutes.value === "") {
             inputMinutes.value = minValue 
