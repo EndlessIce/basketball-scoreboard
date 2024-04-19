@@ -168,6 +168,7 @@ function manageTimeAndQuarter(event) {
         countMinutes = parseInt(inputMinutes.value)
         countSeconds = parseInt(inputSeconds.value)
         btnStart.removeAttribute("disabled")
+        clearInterval(timeInterval)
     }
 }
 
