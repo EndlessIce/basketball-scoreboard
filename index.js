@@ -146,20 +146,28 @@ function manageTimeAndQuarter(event) {
         countSeconds = minValue
         timeDisplay.textContent = countMinutes.toString().padStart(2, '0') + ":" + countSeconds.toString().padStart(2, '0')
         btnStart.removeAttribute("disabled")
-    } else if (event.currentTarget === btnPause) {
+    } else if (event.currentTarget === btnPause && timeDisplay.textContent !== "00:00") {
         clearInterval(timeInterval)
         timeInterval = minValue
         timeDisplay.textContent = countMinutes.toString().padStart(2, '0') + ":" + countSeconds.toString().padStart(2, '0')
-        btnStart.removeAttribute("disabled")
-    } else if (event.currentTarget === btnStart && timeDisplay.textContent !== "00:00" && inputMinutes.value !== "" && inputSeconds.value !== "") {
+        btnStart.removeAttribute("disabled")        
+    } else if (event.currentTarget === btnStart && timeDisplay.textContent !== "00:00") {
         timeInterval = setInterval(countDown, 1000)
-        btnStart.setAttribute("disabled", "true")
-    } else if (event.currentTarget === btnSet && !inputMinutes.value.match(/\D/) && !inputMinutes.value.match(/\D/) && inputMinutes.value <= maxValue && inputMinutes.value >= minValue && inputSeconds.value <= maxValue && inputSeconds.value >= minValue) {
+        btnStart.setAttribute("disabled", "true")      
+    } else if (event.currentTarget === btnSet && !inputMinutes.value.match(/\D/) && !inputMinutes.value.match(/\D/) && inputMinutes.value !== "" && !inputMinutes.value !== "" && inputMinutes.value <= maxValue && inputMinutes.value >= minValue && inputSeconds.value <= maxValue && inputSeconds.value >= minValue) {
+        
+        if (inputMinutes.value === "") {
+            inputMinutes.value = minValue 
+        }
+        
+        if (inputSeconds.value === "") {
+            inputSeconds.value = minValue
+        }
+        
         timeDisplay.textContent = inputMinutes.value.padStart(2, '0') + ":" + inputSeconds.value.toString().padStart(2, '0')
         countMinutes = parseInt(inputMinutes.value)
         countSeconds = parseInt(inputSeconds.value)
         btnStart.removeAttribute("disabled")
-        
     }
 }
 
