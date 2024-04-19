@@ -151,7 +151,7 @@ function manageTimeAndQuarter(event) {
         timeInterval = minValue
         timeDisplay.textContent = countMinutes.toString().padStart(2, '0') + ":" + countSeconds.toString().padStart(2, '0')
         btnStart.removeAttribute("disabled")
-    } else if (event.currentTarget === btnStart && timeDisplay.textContent !== "00:00") {
+    } else if (event.currentTarget === btnStart && timeDisplay.textContent !== "00:00" && inputMinutes.value !== "" && inputSeconds.value !== "") {
         timeInterval = setInterval(countDown, 1000)
         btnStart.setAttribute("disabled", "true")
     } else if (event.currentTarget === btnSet && !inputMinutes.value.match(/\D/) && !inputMinutes.value.match(/\D/) && inputMinutes.value <= maxValue && inputMinutes.value >= minValue && inputSeconds.value <= maxValue && inputSeconds.value >= minValue) {
